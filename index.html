@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hahn Web Studio — Websites for Food Trucks & Small Business | from $2,000</title>
+  <meta name="description" content="Fast, beautiful, mobile-first websites for food trucks and small businesses — starting at $2,000. Online ordering, SEO, and support. Price-match & money-back guaranteed. Book a free consultation." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232f6bff'/%3E%3Ctext x='16' y='23' font-family='Arial' font-size='17' font-weight='bold' fill='%23fff' text-anchor='middle'%3EW%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --navy:#0e1a2f; --navy-2:#16243d; --blue:#2f6bff; --blue-dk:#1f52d6;
+      --teal:#12c2a3; --ink:#1a2233; --muted:#5f6b80; --line:#e6eaf1; --bg:#f6f8fc; --white:#fff;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:"Plus Jakarta Sans",system-ui,sans-serif;background:var(--white);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+    h1,h2,h3{line-height:1.12;font-weight:800;letter-spacing:-.02em}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1140px;margin:0 auto;padding:0 clamp(1.1rem,4vw,2rem)}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;font-size:.95rem;padding:.85rem 1.6rem;border-radius:10px;cursor:pointer;transition:transform .15s,background .2s,box-shadow .2s;border:none}
+    .btn-primary{background:var(--blue);color:#fff;box-shadow:0 10px 24px -10px rgba(47,107,255,.7)}
+    .btn-primary:hover{background:var(--blue-dk);transform:translateY(-2px)}
+    .btn-ghost{background:#fff;color:var(--navy);border:1.5px solid var(--line)}
+    .btn-ghost:hover{border-color:var(--blue);transform:translateY(-2px)}
+    .btn-light{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.25)}
+    .btn-light:hover{background:rgba(255,255,255,.2)}
+
+    header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+    .brand{display:flex;align-items:center;gap:.55rem;font-weight:800;font-size:1.2rem;color:var(--navy)}
+    .brand .mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--blue),var(--teal));color:#fff;display:grid;place-items:center;font-size:1.1rem}
+    nav.links a{color:var(--muted);font-weight:600;font-size:.92rem;margin-left:1.6rem}
+    nav.links a:hover{color:var(--blue)}
+    @media(max-width:820px){nav.links{display:none}}
+
+    .hero{background:radial-gradient(1200px 500px at 70% -10%,rgba(47,107,255,.14),transparent),var(--bg);padding:clamp(3rem,7vw,5.5rem) 0}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:2.5rem;align-items:center}
+    .pill{display:inline-flex;align-items:center;gap:.4rem;background:#fff;border:1px solid var(--line);color:var(--blue);font-weight:700;font-size:.8rem;padding:.35rem .8rem;border-radius:999px}
+    .hero h1{font-size:clamp(2.3rem,5.5vw,3.6rem);color:var(--navy);margin:1rem 0 .9rem}
+    .hero h1 .grad{background:linear-gradient(120deg,var(--blue),var(--teal));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p.lead{color:var(--muted);font-size:clamp(1.05rem,2vw,1.2rem);max-width:44ch;margin-bottom:1.6rem}
+    .hero .cta-row{display:flex;gap:.7rem;flex-wrap:wrap}
+    .hero .price-note{margin-top:1.1rem;font-weight:700;color:var(--navy)}
+    .hero .price-note span{color:var(--teal)}
+    .hero-card{background:var(--navy);border-radius:18px;padding:1.8rem;color:#fff;box-shadow:0 30px 60px -30px rgba(14,26,47,.6)}
+    .hero-card h3{font-size:1.15rem;margin-bottom:.9rem}
+    .hero-card .row{display:flex;align-items:center;gap:.6rem;padding:.5rem 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:.95rem;color:#d7deec}
+    .hero-card .row:last-child{border:none}
+    .hero-card .ck{color:var(--teal);font-weight:800}
+    @media(max-width:820px){.hero-grid{grid-template-columns:1fr}.hero-card{order:-1}}
+
+    section{padding:clamp(3rem,6vw,4.5rem) 0}
+    .head{text-align:center;max-width:640px;margin:0 auto 2.4rem}
+    .head .kick{color:var(--blue);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem}
+    .head h2{font-size:clamp(1.9rem,4vw,2.7rem);color:var(--navy);margin:.4rem 0}
+    .head p{color:var(--muted)}
+    .band{background:var(--bg)}
+
+    .chips{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center}
+    .chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:.5rem 1rem;font-weight:600;font-size:.92rem;color:var(--navy)}
+
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+    .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.6rem;transition:transform .18s,box-shadow .2s}
+    .card:hover{transform:translateY(-4px);box-shadow:0 20px 40px -24px rgba(14,26,47,.3)}
+    .card .ico{width:44px;height:44px;border-radius:10px;background:rgba(47,107,255,.1);color:var(--blue);display:grid;place-items:center;font-size:1.3rem;margin-bottom:.7rem}
+    .card h3{font-size:1.15rem;color:var(--navy);margin-bottom:.3rem}
+    .card p{color:var(--muted);font-size:.93rem}
+    @media(max-width:820px){.cards{grid-template-columns:1fr}}
+
+    .pkgs{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;align-items:stretch}
+    .pkg{background:#fff;border:1px solid var(--line);border-radius:16px;padding:1.8rem;display:flex;flex-direction:column}
+    .pkg.feat{border:2px solid var(--blue);box-shadow:0 24px 50px -30px rgba(47,107,255,.6);position:relative}
+    .pkg.feat::before{content:"Most Popular";position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--blue);color:#fff;font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.25rem .8rem;border-radius:999px}
+    .pkg h3{font-size:1.25rem;color:var(--navy)}
+    .pkg .price{font-size:2.1rem;font-weight:800;color:var(--navy);margin:.3rem 0 .2rem}
+    .pkg .price small{font-size:.8rem;color:var(--muted);font-weight:600}
+    .pkg ul{list-style:none;margin:1rem 0 1.4rem;flex:1}
+    .pkg li{padding:.35rem 0;color:var(--ink);font-size:.92rem;display:flex;gap:.5rem}
+    .pkg li::before{content:"✓";color:var(--teal);font-weight:800}
+    @media(max-width:820px){.pkgs{grid-template-columns:1fr}}
+
+    .guar{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;text-align:center}
+    .guar .g{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.6rem}
+    .guar .ico{font-size:2rem}
+    .guar h3{color:var(--navy);font-size:1.15rem;margin:.4rem 0}
+    .guar p{color:var(--muted);font-size:.9rem}
+    @media(max-width:760px){.guar{grid-template-columns:1fr}}
+
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem}
+    .step{text-align:center}
+    .step .n{width:46px;height:46px;border-radius:12px;background:var(--navy);color:#fff;font-weight:800;display:grid;place-items:center;margin:0 auto .7rem}
+    .step h3{font-size:1.05rem;color:var(--navy);margin-bottom:.2rem}
+    .step p{color:var(--muted);font-size:.88rem}
+    @media(max-width:760px){.steps{grid-template-columns:1fr 1fr}}
+
+    .tech{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center}
+    .tech span{background:#fff;border:1px solid var(--line);border-radius:8px;padding:.5rem .9rem;font-weight:700;font-size:.85rem;color:var(--navy)}
+
+    /* Booking */
+    .book{background:var(--navy);color:#fff}
+    .book .head h2{color:#fff}.book .head p{color:#c3cde0}
+    .book-card{max-width:640px;margin:0 auto;background:#fff;color:var(--ink);border-radius:16px;padding:clamp(1.4rem,4vw,2.4rem)}
+    .field{margin-bottom:1rem}
+    .field label{display:block;font-size:.8rem;font-weight:700;color:var(--navy);margin-bottom:.35rem}
+    .field input,.field select,.field textarea{width:100%;border:1.5px solid var(--line);border-radius:9px;padding:.7rem .8rem;font-family:inherit;font-size:1rem;color:var(--ink)}
+    .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--blue)}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    @media(max-width:560px){.grid2{grid-template-columns:1fr}}
+    .code-row{display:flex;gap:.6rem}
+    .totals{background:var(--bg);border-radius:10px;padding:1rem 1.2rem;margin:1rem 0}
+    .totals .r{display:flex;justify-content:space-between;font-size:.95rem;padding:.2rem 0;color:var(--muted)}
+    .totals .r.total{border-top:1px solid var(--line);margin-top:.4rem;padding-top:.6rem;color:var(--navy);font-weight:800;font-size:1.15rem}
+    .msg{font-size:.85rem;margin-top:.5rem;text-align:center}
+    .msg.ok{color:var(--teal)}.msg.err{color:#e0533f}
+    .hide{display:none}
+
+    footer{background:var(--navy-2);color:#c3cde0;padding:2.6rem 0}
+    .foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:1.5rem}
+    footer h4{color:#fff;margin-bottom:.6rem;font-size:1.05rem}
+    footer a{color:#c3cde0}footer a:hover{color:#fff}
+    .foot .l{font-size:.92rem;margin-bottom:.3rem}
+    .copyright{border-top:1px solid rgba(255,255,255,.12);margin-top:1.8rem;padding-top:1.2rem;text-align:center;font-size:.82rem;color:#94a3bd}
+    @media(max-width:700px){.foot{grid-template-columns:1fr}}
+    .note{background:#fff7e6;border:1px solid #f0c674;color:#8a6a00;font-size:.8rem;padding:.5rem .9rem;border-radius:9px;text-align:center;max-width:700px;margin:1.2rem auto 0}
+    .float{position:fixed;bottom:16px;right:16px;z-index:70;display:none}
+    @media(max-width:820px){.float{display:inline-flex}}
+  </style>
+</head>
+<body id="top">
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top"><span class="mark">W</span> Hahn Web Studio</a>
+      <nav class="links">
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#how">How It Works</a>
+        <a href="#book">Book</a>
+      </nav>
+      <a class="btn btn-primary" href="#book">Get a Free Quote</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="pill">⚡ Food Trucks &amp; Small Business</span>
+        <h1>Websites that <span class="grad">grow your business</span> — from $2,000.</h1>
+        <p class="lead">Fast, beautiful, mobile-first sites with online ordering, SEO, and real support. Built by pros, priced for small business.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#book">Get a Free Quote</a>
+          <a class="btn btn-ghost" href="#pricing">See Pricing</a>
+        </div>
+        <p class="price-note">⭐ <span>Price-Match</span> &amp; <span>Money-Back</span> Guaranteed</p>
+      </div>
+      <div class="hero-card">
+        <h3>Everything you need to get found &amp; get orders:</h3>
+        <div class="row"><span class="ck">✓</span> Custom mobile-first website</div>
+        <div class="row"><span class="ck">✓</span> Online ordering &amp; menus</div>
+        <div class="row"><span class="ck">✓</span> Google &amp; local SEO</div>
+        <div class="row"><span class="ck">✓</span> Your own domain &amp; email</div>
+        <div class="row"><span class="ck">✓</span> Hosting, updates &amp; support</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who it's for -->
+  <section>
+    <div class="wrap">
+      <div class="head"><p class="kick">Who We Build For</p><h2>Perfect for Your Kind of Business</h2></div>
+      <div class="chips">
+        <span class="chip">🚚 Food Trucks</span><span class="chip">🍽️ Restaurants &amp; Cafés</span>
+        <span class="chip">🛍️ Retail Shops</span><span class="chip">🔧 Service Pros</span>
+        <span class="chip">💈 Salons &amp; Barbers</span><span class="chip">🏋️ Gyms &amp; Studios</span>
+        <span class="chip">🚀 Startups</span><span class="chip">✨ &amp; more</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="band">
+    <div class="wrap">
+      <div class="head"><p class="kick">What We Do</p><h2>Done-For-You, Start to Finish</h2><p>You run your business. We handle the website.</p></div>
+      <div class="cards">
+        <div class="card"><div class="ico">💻</div><h3>Custom Websites</h3><p>Clean, modern, mobile-first sites tailored to your brand — no cookie-cutter templates.</p></div>
+        <div class="card"><div class="ico">🛒</div><h3>Online Ordering &amp; E-Commerce</h3><p>Take orders, bookings, and payments online — perfect for food trucks and shops.</p></div>
+        <div class="card"><div class="ico">📈</div><h3>SEO &amp; Local Search</h3><p>Get found on Google for "near me" searches, with a fully optimized Google Business Profile.</p></div>
+        <div class="card"><div class="ico">📱</div><h3>Mobile-First Design</h3><p>Most customers are on phones — your site loads fast and looks perfect on every screen.</p></div>
+        <div class="card"><div class="ico">🔗</div><h3>Domain, Email &amp; Hosting</h3><p>We set up your custom domain, professional email, and reliable hosting.</p></div>
+        <div class="card"><div class="ico">🛟</div><h3>Support &amp; Updates</h3><p>Real ongoing help — menu changes, new photos, and updates whenever you need them.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing">
+    <div class="wrap">
+      <div class="head"><p class="kick">Simple Pricing</p><h2>Packages That Fit</h2><p>Transparent, honest pricing — starting at $2,000.</p></div>
+      <div class="pkgs">
+        <div class="pkg">
+          <h3>Starter</h3>
+          <div class="price">$2,000<small> starting</small></div>
+          <ul><li>Up to 5 pages</li><li>Mobile-first design</li><li>Contact &amp; menu/services</li><li>Google Business setup</li><li>Domain &amp; email setup</li></ul>
+          <a class="btn btn-ghost" href="#book">Get Started</a>
+        </div>
+        <div class="pkg feat">
+          <h3>Growth</h3>
+          <div class="price">$3,500<small>–$5,000</small></div>
+          <ul><li>Everything in Starter</li><li>Online ordering / bookings</li><li>SEO optimization</li><li>Photo &amp; content help</li><li>Priority support</li></ul>
+          <a class="btn btn-primary" href="#book">Most Popular</a>
+        </div>
+        <div class="pkg">
+          <h3>Full Service</h3>
+          <div class="price">$6,000<small>+</small></div>
+          <ul><li>Everything in Growth</li><li>Full e-commerce store</li><li>Advanced SEO &amp; ads</li><li>Social &amp; content package</li><li>Ongoing management</li></ul>
+          <a class="btn btn-ghost" href="#book">Go All In</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guarantees -->
+  <section class="band">
+    <div class="wrap">
+      <div class="head"><p class="kick">Our Promise</p><h2>Zero-Risk, All Reward</h2></div>
+      <div class="guar">
+        <div class="g"><div class="ico">🤝</div><h3>Price-Match Guarantee</h3><p>Find a comparable quote for less? We'll match it. You never overpay.</p></div>
+        <div class="g"><div class="ico">💯</div><h3>Money-Back Guarantee</h3><p>If we don't deliver what we promised, you get your money back. Simple.</p></div>
+        <div class="g"><div class="ico">⚡</div><h3>Done Start to Finish</h3><p>One team handles everything — you just run your business.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how">
+    <div class="wrap">
+      <div class="head"><p class="kick">How It Works</p><h2>Live in 4 Simple Steps</h2></div>
+      <div class="steps">
+        <div class="step"><div class="n">1</div><h3>Free Consult</h3><p>Tell us about your business — no cost, no pressure.</p></div>
+        <div class="step"><div class="n">2</div><h3>We Design</h3><p>We build your site and share a preview.</p></div>
+        <div class="step"><div class="n">3</div><h3>You Review</h3><p>We refine it until you love it.</p></div>
+        <div class="step"><div class="n">4</div><h3>Go Live</h3><p>We launch it — and keep it running.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Built with the best -->
+  <section class="band">
+    <div class="wrap">
+      <div class="head"><p class="kick">Built With the Best</p><h2>Enterprise-Grade Tech, Small-Business Price</h2><p>We build with the same tools the top companies use.</p></div>
+      <div class="tech">
+        <span>Next.js</span><span>React</span><span>Webflow</span><span>Shopify</span><span>Squarespace</span><span>WordPress</span><span>Figma</span><span>AI-Powered</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking / checkout -->
+  <section id="book" class="book">
+    <div class="wrap">
+      <div class="head"><p class="kick">Let's Talk</p><h2>Get Your Free Quote</h2><p>The consultation is free. Website projects start at $2,000.</p></div>
+      <div class="book-card">
+        <form id="bookForm">
+          <div class="grid2">
+            <div class="field"><label>Your Name *</label><input name="name" required autocomplete="name" /></div>
+            <div class="field"><label>Business Name</label><input name="business" placeholder="Your business" /></div>
+          </div>
+          <div class="grid2">
+            <div class="field"><label>Email *</label><input name="email" type="email" required inputmode="email" autocomplete="email" /></div>
+            <div class="field"><label>Phone *</label><input name="phone" type="tel" required inputmode="tel" autocomplete="tel" /></div>
+          </div>
+          <div class="field"><label>Type of Business</label>
+            <select name="type"><option>Food Truck</option><option>Restaurant / Café</option><option>Retail Shop</option><option>Service Business</option><option>Other</option></select>
+          </div>
+          <div class="field"><label>What do you need?</label>
+            <select name="need"><option>Starter — from $2,000</option><option>Growth — $3,500–5,000</option><option>Full Service — $6,000+</option><option>Not sure — help me!</option></select>
+          </div>
+          <div class="field"><label>Preferred Payment Method</label>
+            <select name="payment"><option>Stripe (secure card link)</option><option>Zelle</option><option>Cash App</option><option>Apple Pay</option><option>Wire Transfer</option><option>Bitcoin (BTC)</option></select>
+            <p style="font-size:.78rem;color:var(--muted);margin-top:.35rem">No payment on this page — after we talk, we'll send a secure link or details for your chosen method.</p>
+          </div>
+          <div class="field"><label>Tell us about your project (optional)</label><textarea name="message" rows="3" placeholder="Your vision, pages you want, examples you love..."></textarea></div>
+
+          <div class="field"><label>Discount / Referral Code</label>
+            <div class="code-row">
+              <input id="codeInput" placeholder="Enter code" style="flex:1" />
+              <button type="button" class="btn btn-ghost" id="applyBtn" style="padding:.6rem 1.1rem">Apply</button>
+            </div>
+            <p class="msg" id="codeMsg" style="text-align:left"></p>
+          </div>
+          <div class="totals">
+            <div class="r"><span>Website project (starting)</span><span id="baseP">$2,000</span></div>
+            <div class="r hide" id="discRow"><span id="discLbl">Discount</span><span id="discP">-$0</span></div>
+            <div class="r total"><span>Your starting price</span><b id="totalP">$2,000</b></div>
+          </div>
+          <p style="font-size:.82rem;color:var(--muted);text-align:center;margin-bottom:1rem">Final quote confirmed on your free consult. Price-match &amp; money-back guaranteed.</p>
+
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button type="submit" class="btn btn-primary" id="submitBtn" style="width:100%;justify-content:center">Get My Free Quote 🚀</button>
+          <a href="mailto:dhahn402@gmail.com?subject=Website%20Quote%20Request&amp;body=Hi%2C%20I%27d%20like%20a%20quote.%0A%0AName%3A%20%0ABusiness%3A%20%0APhone%3A%20%0AWhat%20I%20need%3A%20" class="btn btn-ghost" style="width:100%;justify-content:center;margin-top:.7rem">✉️ Prefer email? Email us directly</a>
+          <p class="msg" id="formMsg"></p>
+          <p style="font-size:.78rem;color:var(--muted);text-align:center;margin-top:.6rem">Or call/text: <a href="tel:7722590615" style="color:var(--blue);font-weight:700">(772) 259-0615</a> · We reply within 24 hours.</p>
+        </form>
+      </div>
+      <p class="note">⚙️ To personalize: add the studio name, your buddy's business address, logo, and swap the sample discount codes. (His phone 772-259-0615 is already in.)</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <div>
+          <h4>Hahn Web Studio</h4>
+          <p class="l">Websites for food trucks &amp; small business — from $2,000.</p>
+          <p class="l">Price-match &amp; money-back guaranteed. 🚀</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p class="l">Call/Text: <a href="tel:7722590615">(772) 259-0615</a></p>
+          <p class="l">[Business address — send me &amp; I'll add it]</p>
+          <p class="l"><a href="#book">Get a Free Quote</a></p>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <p class="l"><a href="#services">Websites &amp; Ordering</a></p>
+          <p class="l"><a href="#pricing">Pricing</a></p>
+          <p class="l"><a href="#how">How It Works</a></p>
+        </div>
+      </div>
+      <div class="copyright">&copy; <span id="yr">2026</span> Hahn Web Studio · A Hahn Technologies Corp company 🐓</div>
+    </div>
+  </footer>
+
+  <a class="btn btn-primary float" href="#book">🚀 Free Quote</a>
+
+  <script>
+    document.getElementById("yr").textContent = "2026";
+    var BASE = 2000;
+    var CODES = { NEW10:10, SMALLBIZ15:15, FOODTRUCK20:20, VIP25:25, LAUNCH50:50 };
+    var discount = 0, applied = "";
+    function money(n){ return "$" + n.toLocaleString(); }
+    function render(){
+      var amt = BASE*(discount/100), total = Math.max(0, BASE-amt);
+      document.getElementById("baseP").textContent = money(BASE);
+      var dr = document.getElementById("discRow");
+      if(discount>0){ dr.classList.remove("hide");
+        document.getElementById("discLbl").textContent = "Discount ("+applied+" · "+discount+"%)";
+        document.getElementById("discP").textContent = "-"+money(amt);
+      } else dr.classList.add("hide");
+      document.getElementById("totalP").textContent = money(total);
+      return total;
+    }
+    document.getElementById("applyBtn").onclick = function(){
+      var code = document.getElementById("codeInput").value.trim().toUpperCase();
+      var m = document.getElementById("codeMsg");
+      if(CODES[code]!==undefined){ discount=CODES[code]; applied=code; m.textContent="✓ Code applied — "+discount+"% off!"; m.className="msg ok"; }
+      else { discount=0; applied=""; m.textContent=code?"That code isn't valid.":""; m.className="msg err"; }
+      render();
+    };
+    render();
+    document.getElementById("bookForm").addEventListener("submit", function(e){
+      e.preventDefault(); var f=e.target; if(f._gotcha.value) return;
+      var btn=document.getElementById("submitBtn"), m=document.getElementById("formMsg");
+      btn.disabled=true; btn.textContent="Sending...";
+      var total=render();
+      fetch("https://formspree.io/f/xbdvqvrk", {
+        method:"POST", headers:{"Content-Type":"application/json","Accept":"application/json"},
+        body: JSON.stringify({
+          _subject:"🔔 A new website lead is up — open it! 🚀",
+          _replyto:f.email.value,
+          _cc:"dhahn402@gmail.com, hahntechnologiescorp@gmail.com",
+          name:f.name.value, business:f.business.value||"—", email:f.email.value, phone:f.phone.value,
+          type:f.type.value, need:f.need.value, paymentMethod:f.payment.value, message:f.message.value||"—",
+          discountCode:applied||"None", startingPrice:money(total)
+        })
+      }).then(function(r){
+        if(r.ok){ f.style.display="none"; m.className="msg ok";
+          m.innerHTML="<span style='font-size:1.15rem;font-weight:800'>Thank you! 🚀</span><br>We got your details and will reach out within 24 hours.";
+        } else throw new Error();
+      }).catch(function(){
+        btn.disabled=false; btn.textContent="Get My Free Quote 🚀";
+        m.className="msg err"; m.innerHTML="Something went wrong — please email <a href='mailto:dhahn402@gmail.com' style='color:var(--blue)'>dhahn402@gmail.com</a> or call (772) 259-0615.";
+      });
+    });
+  </script>
+</body>
+</html>
