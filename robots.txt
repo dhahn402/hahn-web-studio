@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dhahn402.github.io/hahn-web-studio/sitemap.xml
