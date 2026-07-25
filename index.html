@@ -18,7 +18,7 @@
   <meta name="twitter:description" content="Websites for food trucks & small businesses from $2,000. Guaranteed." />
   <meta name="twitter:image" content="https://dhahn402.github.io/hahn-web-studio/og-image.png" />
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"ProfessionalService","name":"Hahn Web Studio","description":"Websites for food trucks and small businesses — from $2,000. Online ordering, SEO, and support.","url":"https://dhahn402.github.io/hahn-web-studio/","telephone":"+1-772-259-0615","priceRange":"$$","parentOrganization":{"@type":"Organization","name":"Hahn Technologies Corp"},"makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Custom Website Design"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Online Ordering & E-Commerce"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"SEO & Local Search"}}]}
+  {"@context":"https://schema.org","@type":"ProfessionalService","name":"Hahn Web Studio","description":"Websites for food trucks and small businesses — from $2,000. Online ordering, SEO, and support.","url":"https://dhahn402.github.io/hahn-web-studio/","telephone":"+1-252-626-6236","priceRange":"$$","parentOrganization":{"@type":"Organization","name":"Hahn Technologies Corp"},"makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Custom Website Design"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Online Ordering & E-Commerce"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"SEO & Local Search"}}]}
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does a website cost?","acceptedAnswer":{"@type":"Answer","text":"Websites start at $2,000 for a custom, mobile-first site. Growth and full-service packages with online ordering and SEO are available. Price-match and money-back guaranteed."}},{"@type":"Question","name":"What kinds of businesses do you build for?","acceptedAnswer":{"@type":"Answer","text":"Food trucks, restaurants and cafes, retail shops, service businesses, salons, gyms, and startups."}},{"@type":"Question","name":"Do you set up online ordering?","acceptedAnswer":{"@type":"Answer","text":"Yes — we can add online ordering, bookings, and payments, which is perfect for food trucks and shops."}},{"@type":"Question","name":"Do you offer support after launch?","acceptedAnswer":{"@type":"Answer","text":"Yes — real ongoing help with updates, new photos, and menu changes whenever you need them."}}]}
@@ -356,12 +356,11 @@
 
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <button type="submit" class="btn btn-primary" id="submitBtn" style="width:100%;justify-content:center">Get My Free Quote 🚀</button>
-          <a href="mailto:dhahn402@gmail.com?subject=Website%20Quote%20Request&amp;body=Hi%2C%20I%27d%20like%20a%20quote.%0A%0AName%3A%20%0ABusiness%3A%20%0APhone%3A%20%0AWhat%20I%20need%3A%20" class="btn btn-ghost" style="width:100%;justify-content:center;margin-top:.7rem">✉️ Prefer email? Email us directly</a>
+          <a href="mailto:hahntechnologiescorp@gmail.com?subject=Website%20Quote%20Request&amp;body=Hi%2C%20I%27d%20like%20a%20quote.%0A%0AName%3A%20%0ABusiness%3A%20%0APhone%3A%20%0AWhat%20I%20need%3A%20" class="btn btn-ghost" style="width:100%;justify-content:center;margin-top:.7rem">✉️ Prefer email? Email us directly</a>
           <p class="msg" id="formMsg"></p>
-          <p style="font-size:.78rem;color:var(--muted);text-align:center;margin-top:.6rem">Or call/text: <a href="tel:7722590615" style="color:var(--blue);font-weight:700">(772) 259-0615</a> · We reply within 24 hours.</p>
+          <p style="font-size:.78rem;color:var(--muted);text-align:center;margin-top:.6rem">Or call/text: <a href="tel:2526266236" style="color:var(--blue);font-weight:700">(252) 626-6236</a> · We reply within 24 hours.</p>
         </form>
       </div>
-      <p class="note">⚙️ To personalize: add the studio name, your buddy's business address, logo, and swap the sample discount codes. (His phone 772-259-0615 is already in.)</p>
     </div>
   </section>
 
@@ -388,8 +387,7 @@
         </div>
         <div>
           <h4>Contact</h4>
-          <p class="l">Call/Text: <a href="tel:7722590615">(772) 259-0615</a></p>
-          <p class="l">[Business address — send me &amp; I'll add it]</p>
+          <p class="l">Call/Text: <a href="tel:2526266236">(252) 626-6236</a></p>
           <p class="l"><a href="#book">Get a Free Quote</a></p>
         </div>
         <div>
@@ -415,7 +413,8 @@
   <script>
     document.getElementById("yr").textContent = "2026";
     var BASE = 2000;
-    var CODES = { NEW10:10, SMALLBIZ15:15, FOODTRUCK20:20, VIP25:25, LAUNCH50:50 };
+    var CODES = { NEW10:10, SMALLBIZ15:15, FOODTRUCK20:20, VIP25:25 };
+    // Codes are visible in page source — keep them public-promo sized (max ~25%).
     var discount = 0, applied = "";
     function money(n){ return "$" + n.toLocaleString(); }
     function render(){
@@ -447,7 +446,7 @@
         body: JSON.stringify({
           _subject:"🔔 A new website lead is up — open it! 🚀",
           _replyto:f.email.value,
-          _cc:"dhahn402@gmail.com, dhahn402@gmail.com",
+          _cc:"hahntechnologiescorp@gmail.com, hahntechnologiescorp@gmail.com",
           name:f.name.value, business:f.business.value||"—", email:f.email.value, phone:f.phone.value,
           type:f.type.value, need:f.need.value, paymentMethod:f.payment.value, message:f.message.value||"—",
           discountCode:applied||"None", startingPrice:money(total)
@@ -458,7 +457,7 @@
         } else throw new Error();
       }).catch(function(){
         btn.disabled=false; btn.textContent="Get My Free Quote 🚀";
-        m.className="msg err"; m.innerHTML="Something went wrong — please email <a href='mailto:dhahn402@gmail.com' style='color:var(--blue)'>dhahn402@gmail.com</a> or call (772) 259-0615.";
+        m.className="msg err"; m.innerHTML="Something went wrong — please email <a href='mailto:hahntechnologiescorp@gmail.com' style='color:var(--blue)'>hahntechnologiescorp@gmail.com</a> or call (252) 626-6236.";
       });
     });
   </script>
